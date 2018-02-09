@@ -1,0 +1,10 @@
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.footer {
+    height: 64px;
+}
