@@ -1,10 +1,24 @@
-.container-fluid {
-    padding-right: 0;
+.no-padding {
     padding-left: 0;
-    margin-right: 0;
-    margin-left: 0;
+    padding-right: 0;
+}
+
+.no-right-gap {
+    margin:0;
 }
 
 .footer {
     height: 64px;
+}
+
+.item-description {
+    /* color: #ffffff;  */
+    /* text-align: justify; */
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.item-background {
+    height: 80vh; /* vh for viewpot */
+    background:transparent url('http://via.placeholder.com/1028x720') no-repeat center center /cover;
 }
