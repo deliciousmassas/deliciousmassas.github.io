@@ -22,3 +22,30 @@
     height: 80vh; /* vh for viewpot */
     background:transparent url('http://via.placeholder.com/1028x720') no-repeat center center /cover;
 }
+
+
+body {
+    padding-top: 50px;
+}
+
+/* .nav-link {
+color: #000;
+} */
+
+.navbar {
+    height: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left:0;
+}
+
+.navbar-fixed-top {
+/* background-color: #000 !important; */
+transition: background-color 1500ms linear;
+}
+
+.navbar-fixed-top.scrolled {
+/* background-color: #777 !important; */
+transition: background-color 1500ms linear;
+}
