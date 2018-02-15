@@ -76,41 +76,43 @@ hr {
         line-height: 2;
     }
 
-    .item-background-pizza {
-        box-shadow: 5px 5px 128px 128px #fff6f2 inset;
-        height: 95vh; /* vh for viewpot */
-        background:transparent url('./images/pizza.jpg') no-repeat center center /cover;
+    /* effects on image */
+    div.item-image-effects::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        /* border-radius: 50%; */
+        box-shadow: inset 3px 3px 128px 128px #fff6f2;
+        top: 0;
+        left: 0;
+        z-index: 1; /* You can use higher to ensure that it stays on top */
     }
-    
-    .item-background-pastel {
-        box-shadow: 5px 5px 128px 128px #fff6f2 inset;
-        height: 80vh; /* vh for viewpot */
-        background:transparent url('./images/pastel.jpg') no-repeat center center /cover;
-    }
-    
-    .item-background-lasanha {
-        box-shadow: 5px 5px 128px 128px #fff6f2 inset;
-        height: 80vh; /* vh for viewpot */
-        background:transparent url('./images/lasanha.jpg') no-repeat center center /cover;
+
+    .item-image {
+        padding: 10px;
+        background: white;
+        width: 100%;
     }
 
     .item-background-valores {
-        box-shadow: 5px 5px 128px 128px white inset;
+        box-shadow: 3px 3px 128px 128px white inset;
         height: 95vh; /* vh for viewpot */
         background:transparent url('./images/valores.jpg') no-repeat center center /cover;
     }
     
     .item-background-missao {
-        box-shadow: 5px 5px 128px 128px white inset;
+        box-shadow: 3px 3px 128px 128px white inset;
         height: 80vh; /* vh for viewpot */
         background:transparent url('./images/missao.jpg') no-repeat center center /cover;
     }
     
     .item-background-visao {
-        box-shadow: 5px 5px 128px 128px white inset;
+        box-shadow: 3px 3px 128px 128px white inset;
         height: 80vh; /* vh for viewpot */
         background:transparent url('./images/visao.jpg') no-repeat center center /cover;
     }
+    
 }
 
 /* small */
@@ -126,20 +128,16 @@ hr {
         padding: 1em;
     }
 
-    .item-background-pizza {
-        /*vh for viewpot*/
-        height: 80vh; 
-        background:transparent url('./images/pizza.jpg') no-repeat center center /cover;
+    /* effects on image */
+    div.item-image-effects {
+        height: 100%;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
     }
-    
-    .item-background-pastel {
-        height: 80vh; /* vh for viewpot */
-        background:transparent url('./images/pastel.jpg') no-repeat center center /cover;
-    }
-    
-    .item-background-lasanha {
-        height: 80vh; /* vh for viewpot */
-        background:transparent url('./images/lasanha.jpg') no-repeat center center /cover;
+
+    .item-image {
+        width: 100%;
     }
 
     .item-background-valores {
