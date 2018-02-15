@@ -16,8 +16,37 @@ brand {
 } */
 
 .footer {
-    background-color: white;
     height: 256px;
+}
+
+.h-line-green {
+    border-top: 7px solid #3E5C03
+}
+
+.h-line-red {
+    border-top: 7px solid #ff4f4d
+}
+
+.h-line-white {
+    border-top: 7px solid #ffffff;
+}
+
+hr {
+    width: 100%;
+    display: block;
+    height: 0px;
+    border: 0;
+    
+    margin: 0em 0;
+    padding: 0;    
+}
+
+.footer-red {
+    background-color: #fff6f2; /*red*/
+}
+
+.footer-green {
+    background-color: #fcfcf8; /*green*/
 }
 
 /* #fcfcf8; green */
@@ -28,7 +57,7 @@ brand {
 } 
 
 .body-red {
-    background-color: #fff6f2; /*green*/
+    background-color: #fff6f2; /*red*/
 }
 
 /* large */
@@ -48,21 +77,39 @@ brand {
     }
 
     .item-background-pizza {
-        box-shadow: 5px 5px 128px 128px #fcfcf8 inset;
+        box-shadow: 5px 5px 128px 128px #fff6f2 inset;
         height: 95vh; /* vh for viewpot */
         background:transparent url('./images/pizza.jpg') no-repeat center center /cover;
     }
     
     .item-background-pastel {
-        box-shadow: 5px 5px 128px 128px #fcfcf8 inset;
+        box-shadow: 5px 5px 128px 128px #fff6f2 inset;
         height: 80vh; /* vh for viewpot */
         background:transparent url('./images/pastel.jpg') no-repeat center center /cover;
     }
     
     .item-background-lasanha {
-        box-shadow: 5px 5px 128px 128px #fcfcf8 inset;
+        box-shadow: 5px 5px 128px 128px #fff6f2 inset;
         height: 80vh; /* vh for viewpot */
         background:transparent url('./images/lasanha.jpg') no-repeat center center /cover;
+    }
+
+    .item-background-valores {
+        box-shadow: 5px 5px 128px 128px white inset;
+        height: 95vh; /* vh for viewpot */
+        background:transparent url('./images/valores.jpg') no-repeat center center /cover;
+    }
+    
+    .item-background-missao {
+        box-shadow: 5px 5px 128px 128px white inset;
+        height: 80vh; /* vh for viewpot */
+        background:transparent url('./images/missao.jpg') no-repeat center center /cover;
+    }
+    
+    .item-background-visao {
+        box-shadow: 5px 5px 128px 128px white inset;
+        height: 80vh; /* vh for viewpot */
+        background:transparent url('./images/visao.jpg') no-repeat center center /cover;
     }
 }
 
@@ -81,7 +128,6 @@ brand {
 
     .item-background-pizza {
         /*vh for viewpot*/
-        width: 100%;
         height: 80vh; 
         background:transparent url('./images/pizza.jpg') no-repeat center center /cover;
     }
@@ -95,6 +141,22 @@ brand {
         height: 80vh; /* vh for viewpot */
         background:transparent url('./images/lasanha.jpg') no-repeat center center /cover;
     }
+
+    .item-background-valores {
+        /*vh for viewpot*/
+        height: 80vh; 
+        background:transparent url('./images/valores.jpg') no-repeat center center /cover;
+    }
+    
+    .item-background-missao {
+        height: 80vh; /* vh for viewpot */
+        background:transparent url('./images/missao.jpg') no-repeat center center /cover;
+    }
+    
+    .item-background-visao {
+        height: 80vh; /* vh for viewpot */
+        background:transparent url('./images/visao.jpg') no-repeat center center /cover;
+    }
 }
 
 /* .nav-link {
@@ -107,7 +169,8 @@ color: #000;
 }
 
 .navbar-fixed-top.scrolled {
-    background-color: #fff !important;
+    background-color: inherit !important;
+    /* background-color: #fff !important; */
     transition: background-color 1000ms linear;
 }
 
