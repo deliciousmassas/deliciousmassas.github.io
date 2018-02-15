@@ -16,12 +16,25 @@ brand {
 } */
 
 .footer {
+    background-color: white;
     height: 256px;
+}
+
+/* #fcfcf8; green */
+/* #fff6f2; red */
+.body-green {
+    /* padding-top: 58px; */
+    background-color: #fcfcf8; /*green*/
+} 
+
+.body-red {
+    background-color: #fff6f2; /*green*/
 }
 
 /* large */
 @media (min-width: 572px) { 
     .item-card {
+        background-color: white;
         box-shadow: 1px 1px 1px 1px #ccc;
         position: relative;
         left: 150px;
@@ -35,19 +48,19 @@ brand {
     }
 
     .item-background-pizza {
-        box-shadow: 5px 5px 128px 128px white inset;
+        box-shadow: 5px 5px 128px 128px #fcfcf8 inset;
         height: 95vh; /* vh for viewpot */
         background:transparent url('./images/pizza.jpg') no-repeat center center /cover;
     }
     
     .item-background-pastel {
-        box-shadow: 5px 5px 128px 128px white inset;
+        box-shadow: 5px 5px 128px 128px #fcfcf8 inset;
         height: 80vh; /* vh for viewpot */
         background:transparent url('./images/pastel.jpg') no-repeat center center /cover;
     }
     
     .item-background-lasanha {
-        box-shadow: 5px 5px 128px 128px white inset;
+        box-shadow: 5px 5px 128px 128px #fcfcf8 inset;
         height: 80vh; /* vh for viewpot */
         background:transparent url('./images/lasanha.jpg') no-repeat center center /cover;
     }
@@ -55,12 +68,9 @@ brand {
 
 /* small */
 @media (max-width: 572px) { 
-    /* .item-card {
+    .item-card {
         box-shadow: 1px 1px 1px 1px #ccc;
-        position: relative;
-        left: 150px;
-        width: 720px;
-    } */
+    }
     .item-description {
         background-color: #fff;
         text-align: left;
@@ -86,10 +96,6 @@ brand {
         background:transparent url('./images/lasanha.jpg') no-repeat center center /cover;
     }
 }
-
-/* body {
-    padding-top: 58px;
-} */
 
 /* .nav-link {
 color: #000;
