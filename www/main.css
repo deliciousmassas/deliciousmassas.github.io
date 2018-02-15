@@ -77,7 +77,7 @@ hr {
     }
 
     /* effects on image */
-    div.item-image-effects::after {
+    div.item-image-effects-red::after {
         content: "";
         position: absolute;
         height: 100%;
@@ -89,28 +89,34 @@ hr {
         z-index: 1; /* You can use higher to ensure that it stays on top */
     }
 
+    div.item-image-effects-green::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        /* border-radius: 50%; */
+        box-shadow: inset 3px 3px 128px 128px #fcfcf8;
+        top: 0;
+        left: 0;
+        z-index: 1; /* You can use higher to ensure that it stays on top */
+    }
+
+    div.item-image-effects-white::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        /* border-radius: 50%; */
+        box-shadow: inset 3px 3px 128px 128px white;
+        top: 0;
+        left: 0;
+        z-index: 1; /* You can use higher to ensure that it stays on top */
+    }
+
     .item-image {
         padding: 10px;
         background: white;
         width: 100%;
-    }
-
-    .item-background-valores {
-        box-shadow: 3px 3px 128px 128px white inset;
-        height: 95vh; /* vh for viewpot */
-        background:transparent url('./images/valores.jpg') no-repeat center center /cover;
-    }
-    
-    .item-background-missao {
-        box-shadow: 3px 3px 128px 128px white inset;
-        height: 80vh; /* vh for viewpot */
-        background:transparent url('./images/missao.jpg') no-repeat center center /cover;
-    }
-    
-    .item-background-visao {
-        box-shadow: 3px 3px 128px 128px white inset;
-        height: 80vh; /* vh for viewpot */
-        background:transparent url('./images/visao.jpg') no-repeat center center /cover;
     }
     
 }
@@ -129,7 +135,7 @@ hr {
     }
 
     /* effects on image */
-    div.item-image-effects {
+    div.item-image-effects-* {
         height: 100%;
         width: 100%;
         padding-left: 0;
@@ -138,22 +144,6 @@ hr {
 
     .item-image {
         width: 100%;
-    }
-
-    .item-background-valores {
-        /*vh for viewpot*/
-        height: 80vh; 
-        background:transparent url('./images/valores.jpg') no-repeat center center /cover;
-    }
-    
-    .item-background-missao {
-        height: 80vh; /* vh for viewpot */
-        background:transparent url('./images/missao.jpg') no-repeat center center /cover;
-    }
-    
-    .item-background-visao {
-        height: 80vh; /* vh for viewpot */
-        background:transparent url('./images/visao.jpg') no-repeat center center /cover;
     }
 }
 
