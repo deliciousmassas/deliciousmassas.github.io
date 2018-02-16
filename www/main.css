@@ -52,37 +52,41 @@ hr {
 /* small */
 @media (max-width: 572px) {
     .footer-logo {
-        /* width: 192px;
-        height: 192px; */
+        width: 192px;
+        height: 192px;
+        float: left;
+        top: 32px;
+        position: relative;
     }
 
     .footer-address {
-        /* margin-top: 72px;
+        text-align: center;
+        margin-top: 0px;
         position: relative;
         font-size: medium;
         bottom: 0;
-        left: 0; */
-    }
-
-    .footer-address p {
-        /* margin: 0px;
-        margin-left: 1em;
-        line-height: 1em; */
+        left: 0;
     }
 
     .social {
-        /* margin-left: 1em;
-        margin-top: -20px;
-        margin-bottom: 20px; */
+        margin-left: 1em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-address p {
+        margin: 0px;
+        margin-left: 1em;
+        line-height: 1em;
     }
 
     .footer-slogan {
-        /* height: 150%;
-        float: right;
+        height: 256px;
         position: absolute;
-        bottom: 10px;
+        top: -184px;
+        /* bottom: -5px; */
         right: 10px;
-        z-index: 1000; */
+        z-index: 2000;
     } 
 }
 
