@@ -126,6 +126,10 @@ hr {
     }
 }
 
+#custom-carousel {
+    height: 30px;
+}
+
 .footer-address i {
     color: black;
 }
