@@ -70,14 +70,14 @@ hr {
 
     .social {
         margin-left: 1em;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 20px;
     }
 
-    .footer-address p {
+    .footer-address address {
         margin: 0px;
         margin-left: 1em;
-        line-height: 1em;
+        line-height: 1.2em;
     }
 
     .footer-slogan {
@@ -104,15 +104,15 @@ hr {
         left: 0;
     }
 
-    .footer-address p {
+    .footer-address address {
         margin: 0px;
         margin-left: 1em;
-        line-height: 1em;
+        line-height: 1.1em;
     }
 
     .social {
         margin-left: 1em;
-        margin-top: -20px;
+        margin-top: -50px;
         margin-bottom: 20px;
     }
 
