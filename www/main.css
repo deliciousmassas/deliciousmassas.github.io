@@ -198,12 +198,6 @@ hr {
         z-index: 1; /* You can use higher to ensure that it stays on top */
     }
 
-    .item-image {
-        padding: 10px;
-        background: white;
-        width: 100%;
-    }
-    
 }
 
 /* small */
