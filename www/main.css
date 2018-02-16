@@ -237,7 +237,7 @@ body {
         height: 100%;
         width: 100%;
         /* border-radius: 50%; */
-        box-shadow: inset 3px 3px 96px 96px #fff6f2;
+        box-shadow: inset 0px 0px 48px 72px #fff6f2;
         top: 0;
         left: 0;
         z-index: 1; /* You can use higher to ensure that it stays on top */
@@ -249,7 +249,7 @@ body {
         height: 100%;
         width: 100%;
         /* border-radius: 50%; */
-        box-shadow: inset 3px 3px 96px 96px #fcfcf8;
+        box-shadow: inset 0px 0px 48px 72px #fcfcf8;
         top: 0;
         left: 0;
         z-index: 1; /* You can use higher to ensure that it stays on top */
@@ -261,7 +261,7 @@ body {
         height: 100%;
         width: 100%;
         /* border-radius: 50%; */
-        box-shadow: inset 3px 3px 96px 96px white;
+        box-shadow: inset 0px 0px 48px 72px white;
         top: 0;
         left: 0;
         z-index: 1; /* You can use higher to ensure that it stays on top */
