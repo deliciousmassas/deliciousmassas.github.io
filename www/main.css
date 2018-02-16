@@ -50,7 +50,7 @@ hr {
 }
 
 /* small */
-@media (max-width: 572px) {
+@media (max-width: 992px) {
     .footer-logo {
         width: 192px;
         height: 192px;
@@ -90,7 +90,7 @@ hr {
     } 
 }
 
-@media (min-width: 572px) { 
+@media (min-width: 992px) { 
     .footer-logo {
         width: 192px;
         height: 192px;
@@ -134,6 +134,10 @@ hr {
     color: black;
 }
 
+body {
+    padding-top: 60px;
+}
+
 /* #fcfcf8; green */
 /* #fff6f2; red */
 .body-green {
@@ -145,14 +149,79 @@ hr {
     background-color: #fff6f2; /*red*/
 }
 
+/* medium */
+@media (min-width: 768px) and (max-width: 1024px) { 
+    .item-card {
+        box-shadow: 1px 1px 1px 1px #ccc;
+    }
+    .item-description {
+        background-color: #fff;
+        text-align: left;
+        letter-spacing: 2px;
+        line-height: 2;
+        padding: 1em;
+    }
+
+    /* effects on image */
+    div.item-image-effects-* {
+        height: 100%;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* effects on image */
+    div.item-image-effects-red::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        /* border-radius: 50%; */
+        box-shadow: inset 3px 3px 32px 32px #fff6f2;
+        top: 0;
+        left: 0;
+        z-index: 1; /* You can use higher to ensure that it stays on top */
+    }
+
+    div.item-image-effects-green::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        /* border-radius: 50%; */
+        box-shadow: inset 3px 3px 32px 32px #fcfcf8;
+        top: 0;
+        left: 0;
+        z-index: 1; /* You can use higher to ensure that it stays on top */
+    }
+
+    div.item-image-effects-white::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        /* border-radius: 50%; */
+        box-shadow: inset 3px 3px 32px 32px white;
+        top: 0;
+        left: 0;
+        z-index: 1; /* You can use higher to ensure that it stays on top */
+    }
+
+    .item-image {
+        width: 100%;
+    }
+ }
+
 /* large */
-@media (min-width: 572px) { 
+@media (min-width: 1025px) { 
     .item-card {
         background-color: white;
         box-shadow: 1px 1px 1px 1px #ccc;
-        position: relative;
-        left: 150px;
-        width: 720px;
+        /* margin-left: 150px; */
+        /* position: relative; */
+        /* left: 150px; */
+        /* width: 80%; */
+        /* z-index: 2; */
     }
     .item-description {
         text-align: center;
@@ -168,7 +237,7 @@ hr {
         height: 100%;
         width: 100%;
         /* border-radius: 50%; */
-        box-shadow: inset 3px 3px 128px 128px #fff6f2;
+        box-shadow: inset 3px 3px 96px 96px #fff6f2;
         top: 0;
         left: 0;
         z-index: 1; /* You can use higher to ensure that it stays on top */
@@ -180,7 +249,7 @@ hr {
         height: 100%;
         width: 100%;
         /* border-radius: 50%; */
-        box-shadow: inset 3px 3px 128px 128px #fcfcf8;
+        box-shadow: inset 3px 3px 96px 96px #fcfcf8;
         top: 0;
         left: 0;
         z-index: 1; /* You can use higher to ensure that it stays on top */
@@ -192,7 +261,7 @@ hr {
         height: 100%;
         width: 100%;
         /* border-radius: 50%; */
-        box-shadow: inset 3px 3px 128px 128px white;
+        box-shadow: inset 3px 3px 96px 96px white;
         top: 0;
         left: 0;
         z-index: 1; /* You can use higher to ensure that it stays on top */
@@ -205,7 +274,7 @@ hr {
 }
 
 /* small */
-@media (max-width: 572px) { 
+@media (max-width: 767px) { 
     .item-card {
         box-shadow: 1px 1px 1px 1px #ccc;
     }
