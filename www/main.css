@@ -49,6 +49,83 @@ hr {
     background-color: #fcfcf8; /*green*/
 }
 
+/* small */
+@media (max-width: 572px) {
+    .footer-logo {
+        /* width: 192px;
+        height: 192px; */
+    }
+
+    .footer-address {
+        /* margin-top: 72px;
+        position: relative;
+        font-size: medium;
+        bottom: 0;
+        left: 0; */
+    }
+
+    .footer-address p {
+        /* margin: 0px;
+        margin-left: 1em;
+        line-height: 1em; */
+    }
+
+    .social {
+        /* margin-left: 1em;
+        margin-top: -20px;
+        margin-bottom: 20px; */
+    }
+
+    .footer-slogan {
+        /* height: 150%;
+        float: right;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 1000; */
+    } 
+}
+
+@media (min-width: 572px) { 
+    .footer-logo {
+        width: 192px;
+        height: 192px;
+    }
+
+    .footer-address {
+        margin-top: 72px;
+        position: relative;
+        font-size: medium;
+        bottom: 0;
+        left: 0;
+    }
+
+    .footer-address p {
+        margin: 0px;
+        margin-left: 1em;
+        line-height: 1em;
+    }
+
+    .social {
+        margin-left: 1em;
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-slogan {
+        height: 150%;
+        float: right;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 1000;
+    }
+}
+
+.footer-address i {
+    color: black;
+}
+
 /* #fcfcf8; green */
 /* #fff6f2; red */
 .body-green {
