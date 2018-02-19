@@ -1,8 +1,9 @@
 /* Body */
 body {
     padding-top: 60px;
-    background-image: url('images/background/back-image.jpg');
-    background-repeat: repeat;
+    /*background-image: url('images/background/back-image.jpg');*/
+    background-color: white;
+    /*background-repeat: repeat;*/
 }
 
 /* #fcfcf8; green */
@@ -23,6 +24,7 @@ body {
 
 .footer-left {
     background-color: inherit;
+    text-align: left;
 }
 
 .footer-center {
@@ -214,9 +216,9 @@ brand {
         height: 100%;
         width: 100%;
         position:relative;
-        -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-        box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        -webkit-box-shadow:0 1px 4px rgba(0, 255, 0, 0.3), 0 0 40px rgba(0, 255, 0, 0.1) inset;
+        -moz-box-shadow:0 1px 4px rgba(0, 255, 0, 0.3), 0 0 40px rgba(0, 255, 0, 0.1) inset;
+        box-shadow:0 1px 4px rgba(0, 255, 0, 0.3), 0 0 40px rgba(0, 255, 0, 0.1) inset;
     }
 
     .item-image-effects:before, .item-image-effects:after
@@ -224,9 +226,9 @@ brand {
         content:"";
         position:absolute;
         z-index:-1;
-        -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-        -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-        box-shadow:0 0 20px rgba(0,0,0,0.8);
+        -webkit-box-shadow:0 0 20px rgba(255,0,0,0.8);
+        -moz-box-shadow:0 0 20px rgba(255,0,0,0.8);
+        box-shadow:0 0 20px rgba(255,0,0,0.8);
         top:0;
         bottom:0;
         left:10px;
