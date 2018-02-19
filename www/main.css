@@ -1,10 +1,6 @@
-.no-padding {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 .no-right-gap {
     margin:0;
+    margin-bottom: 100px;
 }
 
 /* 
@@ -42,15 +38,22 @@ hr {
 }
 
 .footer-red {
-    background-color: #fff6f2; /*red*/
+    background-image: url('images/background/back-image.jpg');
+    background-repeat: repeat;
 }
 
 .footer-green {
-    background-color: #fcfcf8; /*green*/
+    background-image: url('images/background/back-image.jpg');
+    background-repeat: repeat;
 }
 
 /* small */
 @media (max-width: 992px) {
+    .no-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .footer-logo {
         width: 192px;
         height: 192px;
@@ -136,6 +139,8 @@ hr {
 
 body {
     padding-top: 60px;
+    background-image: url('images/background/back-image.jpg');
+    background-repeat: repeat;
 }
 
 /* #fcfcf8; green */
@@ -143,10 +148,14 @@ body {
 .body-green {
     /* padding-top: 58px; */
     background-color: #fcfcf8; /*green*/
+    background-image: url('images/background/back-image.jpg');
+    background-repeat: repeat;
 } 
 
 .body-red {
     background-color: #fff6f2; /*red*/
+    background-image: url('images/background/back-image.jpg');
+    background-repeat: repeat;
 }
 
 /* medium */
@@ -162,54 +171,49 @@ body {
         padding: 1em;
     }
 
-    /* effects on image */
-    div.item-image-effects-* {
+    .item-image-effects {
         height: 100%;
         width: 100%;
         padding-left: 0;
         padding-right: 0;
+        box-shadow: 0 10px 6px -6px #777;
+        -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     }
 
-    /* effects on image */
-    div.item-image-effects-red::after {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        /* border-radius: 50%; */
-        box-shadow: inset 3px 3px 32px 32px #fff6f2;
-        top: 0;
-        left: 0;
-        z-index: 1; /* You can use higher to ensure that it stays on top */
+    .item-image-effects:before, .item-image-effects:after
+    {
+        content:"";
+        position:absolute;
+        z-index:-1;
+        -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        box-shadow:0 0 20px rgba(0,0,0,0.8);
+        top:0;
+        bottom:0;
+        left:10px;
+        right:10px;
+        -moz-border-radius:100px / 10px;
+        border-radius:100px / 10px;
     }
-
-    div.item-image-effects-green::after {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        /* border-radius: 50%; */
-        box-shadow: inset 3px 3px 32px 32px #fcfcf8;
-        top: 0;
-        left: 0;
-        z-index: 1; /* You can use higher to ensure that it stays on top */
-    }
-
-    div.item-image-effects-white::after {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        /* border-radius: 50%; */
-        box-shadow: inset 3px 3px 32px 32px white;
-        top: 0;
-        left: 0;
-        z-index: 1; /* You can use higher to ensure that it stays on top */
+    .item-image-effects:after
+    {
+        right:10px;
+        left:auto;
+        -webkit-transform:skew(8deg) rotate(3deg);
+        -moz-transform:skew(8deg) rotate(3deg);
+            -ms-transform:skew(8deg) rotate(3deg);
+            -o-transform:skew(8deg) rotate(3deg);
+                transform:skew(8deg) rotate(3deg);
     }
 
     .item-image {
         width: 100%;
+        padding: 0.6em;
+        background-color: white;
     }
+
  }
 
 /* large */
@@ -231,44 +235,45 @@ body {
     }
 
     /* effects on image */
-    div.item-image-effects-red::after {
-        content: "";
-        position: absolute;
+    .item-image-effects {
         height: 100%;
         width: 100%;
-        /* border-radius: 50%; */
-        box-shadow: inset 0px 0px 48px 72px #fff6f2;
-        top: 0;
-        left: 0;
-        z-index: 1; /* You can use higher to ensure that it stays on top */
+        position:relative;
+        -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     }
 
-    div.item-image-effects-green::after {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        /* border-radius: 50%; */
-        box-shadow: inset 0px 0px 48px 72px #fcfcf8;
-        top: 0;
-        left: 0;
-        z-index: 1; /* You can use higher to ensure that it stays on top */
+    .item-image-effects:before, .item-image-effects:after
+    {
+        content:"";
+        position:absolute;
+        z-index:-1;
+        -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        box-shadow:0 0 20px rgba(0,0,0,0.8);
+        top:0;
+        bottom:0;
+        left:10px;
+        right:10px;
+        -moz-border-radius:100px / 10px;
+        border-radius:100px / 10px;
     }
-
-    div.item-image-effects-white::after {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        /* border-radius: 50%; */
-        box-shadow: inset 0px 0px 48px 72px white;
-        top: 0;
-        left: 0;
-        z-index: 1; /* You can use higher to ensure that it stays on top */
+    .item-image-effects:after
+    {
+        right:10px;
+        left:auto;
+        -webkit-transform:skew(8deg) rotate(3deg);
+        -moz-transform:skew(8deg) rotate(3deg);
+            -ms-transform:skew(8deg) rotate(3deg);
+            -o-transform:skew(8deg) rotate(3deg);
+                transform:skew(8deg) rotate(3deg);
     }
 
     .item-image {
         width: 100%;
+        padding: 1em;
+        background-color: white;
     }
 
 }
@@ -287,7 +292,7 @@ body {
     }
 
     /* effects on image */
-    div.item-image-effects-* {
+    .item-image-effects {
         height: 100%;
         width: 100%;
         padding-left: 0;
@@ -298,10 +303,6 @@ body {
         width: 100%;
     }
 }
-
-/* .nav-link {
-color: #000;
-} */
 
 .navbar-fixed-top {
     background-color: #ffffff00 !important;
