@@ -6,7 +6,7 @@ $message = $_POST['message'];
 $from = $_POST['email'];
 $back = $_POST['back-page'];
 
-$to = "adalrsjr1@gmail.com";
+$to = "delicious.pizzas@gmail.com";
 
 // Always set content-type when sending HTML email
 $headers = "MIME-Version: 1.0" . "\r\n";

@@ -7,7 +7,7 @@ body {
 }
 
 .body-top-padding {
-  padding-top: 10%;
+  padding-top: 196px;
 }
 
 /* #fcfcf8; green */
@@ -66,46 +66,57 @@ hr {
         padding-right: 0;
     }
 
-    
-
     .footer-address {
         text-align: center;
         margin-top: 0px;
         position: relative;
-        font-size: medium;
+        font-size: small;
         bottom: 0;
         left: 0;
     }
 
     .social {
-        margin-left: 1em;
+        /*margin-left: 1em;*/
         margin-top: 10px;
         margin-bottom: 20px;
+        font-size: 32px;
     }
 
     .footer-address address {
         margin: 0px;
-        margin-left: 1em;
+        /*margin-left: 1em;*/
         line-height: 1.2em;
+    }
+
+    .footer-center {
+      height: 0;
+    }
+
+    .footer-right {
+      height: 0;
     }
 
     .footer-logo {
         width: 192px;
         height: 192px;
-        float: left;
-        top: 20px;
+        float: center;
+        top: -150px;
         position: relative;
+        z-index: -1;
+        opacity: 0.1;
     }
 
     .footer-slogan {
-        height: 256px;
+        height: 150px;
         float: right;
         position: absolute;
-        bottom: 10px;
+        top: -20em;
         right: 10px;
         z-index: 1000;
         background-color: inherit;
     }
+
+
 }
 
 @media (min-width: 992px) { 
@@ -132,6 +143,7 @@ hr {
         margin-left: 1em;
         margin-top: -50px;
         margin-bottom: 20px;
+        font-size: 38px;
     }
 
     .footer-slogan {
@@ -206,18 +218,60 @@ brand {
 @media (min-width: 1024px) { 
    /* Navbar */
 
+  #brand {
+    height: 172px;
+    transition: height 1000ms ease;
+  }
+
+  #brand.scrolled {
+    height: 64px;
+    transition: height 1000ms ease;
+  }
+
+
+  .navbar-custom {
+     background-image: url("./images/stripes.png");
+  }
+
+  .navbar-custom .navbar-nav .nav-link {
+    color: #343a40;
+    /*text-shadow: 0px 0px 1px #ddd;*/
+    font-weight: bold;
+  }
+
+  .navbar-custom .navbar-brand {
+    color: #343a40;
+    font-weight: bold;
+    font-size: 4em;
+
+  }
+
   .navbar-fixed-top {
     background-color: #ffffff00 !important;
-    height: 20%;
-    transition: background-color 1000ms linear, height 500ms linear;
+    background-image: url("./images/stripes.png");
+    height: 196px;
+    transition: background-image 1000ms linear, height 500ms linear;
   } 
-
+/*
+  substitute stripes to a single red stripe
+*/
   .navbar-fixed-top.scrolled {
-    background-color: inherit !important;
-    background-color: #fff !important;
-    height: 10%;
-    transition: background-color 1000ms linear, height 500ms linear;
+    /*background-color: inherit !important;*/
+    background-color: white !important;
+    background-image: url("./images/stripes72.png");
+    color: #343a40;
+    height: 72px;
+    transition: background-image 1000ms linear, background-color 1000ms linear, height 500ms linear;
   }
+
+  .navbar-custom.scrolled .navbar-brand {
+    color: #343a40;
+  }
+
+  .navbar-custom.scrolled .navbar-nav .nav-link {
+    color: #343a40;
+  }
+
  .item-card {
         background-color: white;
         box-shadow: 1px 1px 1px 1px #ccc;
@@ -276,8 +330,13 @@ brand {
 /* small */
 @media (max-width: 767px) { 
     body {
-      padding-top: 60px;
+      padding-top: 57px;
     }
+
+    #brand {
+      height: 40px;
+    }
+
     .item-card {
         box-shadow: 1px 1px 1px 1px #ccc;
     }

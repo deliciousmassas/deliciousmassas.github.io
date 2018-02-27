@@ -1,12 +1,10 @@
-// $(function () {
-
-
-
-// });
 $(document).scroll(function () {
     var $nav = $(".navbar-fixed-top");
     $nav.toggleClass('scrolled', $(this).scrollTop() > 0 /*$nav.height()*/);
     $nav.toggleClass('toggle-flag', $(this).scrollTop() > 0);
+
+    var $logo = $("#brand");
+    $logo.toggleClass('scrolled', $(this).scrollTop() > 0);
 });
 
 $('#collapsibleNavId').on('show.bs.collapse', function (e) {
