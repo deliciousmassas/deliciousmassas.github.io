@@ -6,9 +6,6 @@ body {
     /*background-repeat: repeat;*/
 }
 
-.body-top-padding {
-  padding-top: 196px;
-}
 
 /* #fcfcf8; green */
 /* #fff6f2; red */
@@ -65,6 +62,9 @@ hr {
         padding-left: 0;
         padding-right: 0;
     }
+.body-top-padding {
+  padding-top: 57px;
+}
 
     .footer-address {
         text-align: center;
@@ -120,6 +120,9 @@ hr {
 }
 
 @media (min-width: 992px) { 
+.body-top-padding {
+  padding-top: 196px;
+}
     .footer-logo {
         width: 192px;
         height: 192px;

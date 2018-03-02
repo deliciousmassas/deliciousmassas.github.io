@@ -47,3 +47,24 @@ $(function () {
         }
     });
 });
+
+$(function() {
+  $("img.hover").each(function() {
+    var height = $("img.hover").height();
+    console.log(height);
+    $(".hover").css("height",height+"px");
+  });
+});
+
+$(".hover").hover(
+  function() {
+    var name = $(this).attr('src');
+    var newName = name.replace(".jpg","2.jpg")
+    $(this).attr('src', newName);
+  },
+  function() {
+    var name = $(this).attr('src');
+    var newName = name.replace("2.jpg",".jpg")
+    $(this).attr('src', newName);
+}
+);
