@@ -214,6 +214,18 @@ brand {
 
  }
 
+.navbar-custom {
+  color: #343a40;
+}
+.navbar-custom.scrolled .navbar-brand {
+    color: #343a40;
+}
+
+.navbar-custom.scrolled .navbar-nav .nav-link {
+    color: #343a40;
+}
+
+
 /* large */
 @media (min-width: 1024px) { 
    /* Navbar */
@@ -227,16 +239,16 @@ brand {
     height: 64px;
     transition: height 1000ms ease;
   }
-
-
-  .navbar-custom {
-     background-image: url("./images/stripes.png");
-  }
-
+  
   .navbar-custom .navbar-nav .nav-link {
     color: #343a40;
     /*text-shadow: 0px 0px 1px #ddd;*/
     font-weight: bold;
+  }
+
+  .navbar-custom ul {
+    position: relative;
+    bottom: -0.5em;
   }
 
   .navbar-custom .navbar-brand {
@@ -248,7 +260,7 @@ brand {
 
   .navbar-fixed-top {
     background-color: #ffffff00 !important;
-    background-image: url("./images/stripes.png");
+    /*background-image: url("./images/stripes.png");*/
     height: 196px;
     transition: background-image 1000ms linear, height 500ms linear;
   } 
@@ -256,12 +268,10 @@ brand {
   substitute stripes to a single red stripe
 */
   .navbar-fixed-top.scrolled {
-    /*background-color: inherit !important;*/
-    background-color: white !important;
-    background-image: url("./images/stripes72.png");
+    background-color: #f8f9fa !important;
     color: #343a40;
     height: 72px;
-    transition: background-image 1000ms linear, background-color 1000ms linear, height 500ms linear;
+    transition: background-color 1000ms linear, height 500ms linear;
   }
 
   .navbar-custom.scrolled .navbar-brand {
@@ -335,6 +345,24 @@ brand {
 
     #brand {
       height: 40px;
+    }
+
+    .navbar-custom {
+      background-color: white;
+    }
+
+    .navbar-custom a {
+      font-weight: bold;
+      color: #343a40;
+    }
+    
+    .navbar-custom .navbar-nav .nav-link {
+      color: #343a40;
+      /*text-shadow: 0px 0px 1px #ddd;*/
+      font-weight: normal;
+    }
+    .navbar-custom .navbar-toggler-icon {
+      color: #343a40;
     }
 
     .item-card {
