@@ -98,7 +98,7 @@ hr {
 
     .footer-logo {
         width: 192px;
-        height: 192px;
+        /*height: 192px;*/
         float: center;
         top: -150px;
         position: relative;
@@ -125,7 +125,7 @@ hr {
 }
     .footer-logo {
         width: 192px;
-        height: 192px;
+        /*height: 192px;*/
     }
 
     .footer-address {
