@@ -290,10 +290,14 @@ brand {
         box-shadow: 1px 1px 1px 1px #ccc;
     }
     .item-description {
-        text-align: center;
-        letter-spacing: 3px;
+        text-align: left;
+        letter-spacing: 0.1em;
         padding: 2em;
-        line-height: 2;
+        line-height: 1.5em;
+    }
+
+    .item-description br {
+        margin-bottom: 1em;
     }
 
     /* effects on image */
@@ -372,12 +376,27 @@ brand {
         box-shadow: 1px 1px 1px 1px #ccc;
     }
     .item-description {
+        text-align: left;
+        letter-spacing: 0.1em;
+        padding: 1em;
+        line-height: 1.2em;
+    }
+
+    .item-description br {
+        margin-bottom: 1em;
+    }
+
+    /*.item-description {
         background-color: #fff;
         text-align: left;
         letter-spacing: 2px;
-        line-height: 2;
+        line-height: 1em;
         padding: 1em;
     }
+
+    .item-description br {
+      padding-bottom: 1em;
+    }*/
 
     /* effects on image */
     .item-image-effects {
