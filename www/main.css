@@ -86,6 +86,7 @@ hr {
         margin: 0px;
         /*margin-left: 1em;*/
         line-height: 1.2em;
+        color: white;
     }
 
     .footer-center {
@@ -129,7 +130,6 @@ hr {
     }
 
     .footer-address {
-        margin-top: 72px;
         position: relative;
         font-size: medium;
         bottom: 0;
@@ -140,6 +140,7 @@ hr {
         margin: 0px;
         margin-left: 1em;
         line-height: 1.1em;
+        color: white;
     }
 
     .social {
@@ -185,7 +186,12 @@ brand {
 }
 
 .footer-address i {
-    color: black;
+    color: white;
+}
+
+address > a {
+  text-decoration: none;
+  color: white;
 }
 
 /* medium */
