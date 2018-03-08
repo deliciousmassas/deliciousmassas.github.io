@@ -234,12 +234,12 @@ brand {
    /* Navbar */
 
   #brand {
-    height: 172px;
+    height: 2.7em;
     transition: height 1000ms ease;
   }
 
   #brand.scrolled {
-    height: 64px;
+    height: 1em;
     transition: height 1000ms ease;
   }
   

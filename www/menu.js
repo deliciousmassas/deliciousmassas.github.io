@@ -51,7 +51,6 @@ $(function () {
 $(function() {
   $("img.hover").each(function() {
     var height = $("img.hover").height();
-    console.log(height);
     $(".hover").css("height",height+"px");
   });
 });
