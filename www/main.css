@@ -14,7 +14,7 @@ body {
 
 .footer {
     height: 256px;
-    /* background-color: black; */
+    background-color: #ff4f4d; 
 }
 
 .footer-right {
@@ -113,7 +113,7 @@ hr {
         top: -20em;
         right: 10px;
         z-index: 1000;
-        background-color: inherit;
+        background-color: #ffffff00;
     }
 
 
@@ -156,7 +156,7 @@ hr {
         bottom: 10px;
         right: 10px;
         z-index: 1000;
-        background-color: inherit;
+        background-color: #ffffff00;
     }
 }
 

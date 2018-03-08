@@ -20,7 +20,7 @@
    sodipodi:docname="slogan.svg"><metadata
      id="metadata141"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1"
@@ -29,8 +29,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1056"
+     inkscape:window-width="1600"
+     inkscape:window-height="847"
      id="namedview139"
      showgrid="false"
      fit-margin-top="0"
@@ -38,10 +38,10 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="0.5"
-     inkscape:cx="20.29552"
-     inkscape:cy="729.77209"
+     inkscape:cx="-322.70448"
+     inkscape:cy="489.77209"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" /><defs
      id="defs4"><font
@@ -154,7 +154,7 @@
      id="path4505"
      d="M 6324.5428,3710.1199 C 7110.5506,3470.2301 7654.7099,3111.2289 7935.7772,2701.4177 8615.5677,1706.0431 7584.4431,616.54522 5631.6793,270.03822 3678.9155,-77.301668 1543.1312,448.28942 861.70661,1443.664 180.28193,2439.0386 1211.4065,3528.5365 3165.8043,3875.8769 c 599.7191,106.6175 1187.9995,130.7731 1782.8162,84.9608 1165.1218,299.8619 2330.2436,598.8907 3493.7314,898.7525 C 6324.5428,3710.1199 7030.4791,4093.2767 6324.5428,3710.1199 Z m 995.1741,-440.6306 M 7770.7318,1242.0902 M 2770.3493,353.33322 M 1025.1178,2902.9915 m 3034.5458,1072.0064 m 2635.8225,435.6326 m -106.2172,-557.2432"
      class="fil7 str0" /><ellipse
-     style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:#4d4d4d;stroke-width:28.22222519;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     style="opacity:1;fill:#1a1a1a;fill-opacity:0.13084112;stroke:none;stroke-width:28.22222519;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
      id="path4385"
      cx="9169.5146"
      cy="19603.385"
@@ -347,4 +347,4 @@
          height="170.56294"
          x="-302.10822"
          y="-94.211777" /></flowRegion><flowPara
-       id="flowPara4429"></flowPara></flowRoot></svg>
+       id="flowPara4429" /></flowRoot></svg>
