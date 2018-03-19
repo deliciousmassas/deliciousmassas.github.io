@@ -3,6 +3,7 @@ body {
     /*padding-top: 60px;*/
     /*background-image: url('images/background/back-image.jpg');*/
     background-color: white;
+    font-family: "Arsenal", sans-serif;
     /*background-repeat: repeat;*/
 }
 
@@ -181,6 +182,8 @@ brand {
     text-shadow: 1px 1px 2px red;
 } 
 
+
+
 #custom-carousel {
     height: 30px;
 }
@@ -224,6 +227,7 @@ address > a {
  }
 
 .navbar-custom {
+  font-family: "Raleway", sans-serif;
   color: #343a40;
 }
 .navbar-custom.scrolled .navbar-brand {
