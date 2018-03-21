@@ -1,3 +1,16 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} !^/site/www/
+
+# Rewrites all URLS [Replace "example" with the actual domain, without
+# the TLD(.com, .net, .biz, etc)]
+
+RewriteCond ${HTTP_HOST} ^(www\.)?deliciousmassas\.
+
+# Rewrite all thos to insert /folder
+RewriteRule ^(.*)$ /site/www/$1 [L]
+
 #Força a utilizar Cache-Control e Expires header
 <IfModule mod_headers.c>
   Header unset ETag
