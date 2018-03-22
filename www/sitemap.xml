@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://www.deliciousmassas.com.br/site/www/</loc>
+  <lastmod>2018-03-22T13:21:35+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.deliciousmassas.com.br/site/www/index.html</loc>
+  <lastmod>2018-03-22T13:21:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.deliciousmassas.com.br/site/www/produtos.html</loc>
+  <lastmod>2018-03-22T13:02:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.deliciousmassas.com.br/site/www/empresa.html</loc>
+  <lastmod>2018-03-22T13:02:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.deliciousmassas.com.br/site/www/servicos.html</loc>
+  <lastmod>2018-03-22T13:02:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.deliciousmassas.com.br/site/www/contato.html</loc>
+  <lastmod>2018-03-22T13:02:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
