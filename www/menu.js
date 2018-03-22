@@ -53,7 +53,7 @@ $(function() {
     var height = $("img.hover").height();
     $(".hover").css("height",height+"px");
     // for correctly load products images for the first time
-    $(this).attr('src', $(this).attr('src')+'?'+Math.random());
+    //$(this).attr('src', $(this).attr('src')+'?'+Math.random());
   });
 });
 
