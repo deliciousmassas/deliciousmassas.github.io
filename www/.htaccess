@@ -1,4 +1,5 @@
 Redirect /index.html /site/www/
+SetEnv SERVER_ADMIN adalrsjr1@gmail.com
 
 <ifModule mod_gzip.c>
   mod_gzip_on Yes
