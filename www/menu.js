@@ -52,10 +52,10 @@ $(function() {
    $("img.hover").each(function() {
      var height = $("img.hover").height();
      $(".hover").css("height",height+"px");
-     console.log(height)
      // for correctly load products images for the first time
      //$(this).attr('src', $(this).attr('src')+'?'+Math.random());
    });
+   $($('link')[0]||$('style')[0]).remove();$.get('/css/main.css', function(d){$('head').append($('<style/>').html(d))})
 });
 
 $(".hover").hover(
@@ -65,6 +65,7 @@ $(".hover").hover(
     $(this).attr('src', newName);
   },
   function() {
+    var height = $(this)
     var name = $(this).attr('src');
     var newName = name.replace("2.jpg",".jpg")
     $(this).attr('src', newName);
