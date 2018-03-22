@@ -52,6 +52,8 @@ $(function() {
   $("img.hover").each(function() {
     var height = $("img.hover").height();
     $(".hover").css("height",height+"px");
+    // for correctly load products images for the first time
+    $(this).attr('src', $(this).attr('src')+'?'+Math.random());
   });
 });
 
@@ -65,5 +67,5 @@ $(".hover").hover(
     var name = $(this).attr('src');
     var newName = name.replace("2.jpg",".jpg")
     $(this).attr('src', newName);
-}
+  }
 );
