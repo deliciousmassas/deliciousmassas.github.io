@@ -48,15 +48,15 @@ $(function () {
     });
 });
 
-$(function() {
-   $("img.hover").each(function() {
-     var height = $("img.hover").height();
-     $(".hover").css("height",height+"px");
-     // for correctly load products images for the first time
-     //$(this).attr('src', $(this).attr('src')+'?'+Math.random());
-   });
-   $($('link')[0]||$('style')[0]).remove();$.get('/css/main.css', function(d){$('head').append($('<style/>').html(d))})
-});
+// $(function() {
+//    $("img.hover").each(function() {
+//      var height = $("img.hover").height();
+//      $(".hover").css("height",height+"px");
+//      // for correctly load products images for the first time
+//      //$(this).attr('src', $(this).attr('src')+'?'+Math.random());
+//    });
+//    $($('link')[0]||$('style')[0]).remove();$.get('/css/main.css', function(d){$('head').append($('<style/>').html(d))})
+// });
 
 $(".hover").hover(
   function() {
