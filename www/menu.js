@@ -56,7 +56,6 @@ $(function() {
      // for correctly load products images for the first time
      //$(this).attr('src', $(this).attr('src')+'?'+Math.random());
    });
-   location.reload();
 });
 
 $(".hover").hover(
