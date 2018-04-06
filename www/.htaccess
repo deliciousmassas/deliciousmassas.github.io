@@ -5,6 +5,7 @@
 # RewriteRule (.*) https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RewriteEngine On
+# it forces all web traffic to use HTTPS
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://www.deliciousmassas.com.br/$1 [R=301,L]
 
