@@ -1,3 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_POST}%{REQUEST_URI}
+
 Redirect /index.html /site/www/
 SetEnv SERVER_ADMIN adalrsjr1@gmail.com
 
