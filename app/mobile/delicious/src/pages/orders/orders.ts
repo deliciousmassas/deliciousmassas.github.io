@@ -36,4 +36,9 @@ export class OrdersPage {
       item: item
     });
   }
+
+  newOrder(event) {
+    console.log(event)
+    this.navCtrl.push(OrderPage);
+  }
 }
