@@ -17,4 +17,23 @@
 
 <ion-content padding>
 
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Cliente</ion-label>
+      <ion-select [(ngModel)]="costumers">
+        <ion-option *ngFor="let costumer of costumers; trackBy: trackCostumers">
+          {{ costumer }}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Data</ion-label>
+      <ion-datetime displayFormat="DD/MMM/YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="date"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  
+
 </ion-content>

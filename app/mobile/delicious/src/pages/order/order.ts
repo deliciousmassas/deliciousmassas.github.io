@@ -14,11 +14,23 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class OrderPage {
 
+  costumers: string[] = ["c1", "c2", "c3"];
+  products: string[] = ["p1", "p2", "p3", "p4"];
+  date: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad OrderPage');
+  }
+
+  trackCostumers(index, costumer) {
+    console.debug(index + " " + costumer);
+  }
+
+  trackProduct(index, constumer) {
+
   }
 
 }
