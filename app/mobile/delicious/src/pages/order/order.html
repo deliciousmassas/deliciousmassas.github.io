@@ -21,7 +21,7 @@
 
     <ion-item>
       <ion-label>Cliente</ion-label>
-      <ion-select [(ngModel)]="costumers">
+      <ion-select [(ngModel)]="selected_costumer">
         <ion-option *ngFor="let costumer of costumers; trackBy: trackCostumers">
           {{ costumer }}
         </ion-option>
@@ -32,8 +32,31 @@
       <ion-label>Data</ion-label>
       <ion-datetime displayFormat="DD/MMM/YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="date"></ion-datetime>
     </ion-item>
+
   </ion-list>
 
-  
+  <ion-item-group>
+    <ion-item-divider color="light">Produtos</ion-item-divider>
+    <ion-item *ngFor="let product of products">
+        <ion-grid item-content>
+          <ion-row>
+              <ion-col col-9>
+                <ion-label>{{ product.name }}</ion-label>
+              </ion-col>
+              <ion-col col-3>
+                <ion-input placeholder="Qtd." type="number" value="0" [(ngModel)]="product.quantity"></ion-input>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-item>
+  </ion-item-group>
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button full (click)="submitOrder($event)">
+      Finalizar
+    </button>
+  </ion-toolbar>
+</ion-footer>

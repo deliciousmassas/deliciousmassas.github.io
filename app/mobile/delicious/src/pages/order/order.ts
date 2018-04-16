@@ -15,22 +15,35 @@ import { NavController, NavParams } from 'ionic-angular';
 export class OrderPage {
 
   costumers: string[] = ["c1", "c2", "c3"];
-  products: string[] = ["p1", "p2", "p3", "p4"];
+  products: Product[] = [{name:"p1",quantity:0}, {name:"p2", quantity:0},
+                                {name:"p3", quantity:0}, {name:"p4", quantity:0}]
   date: any;
 
+  selected_products: string[] = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    // fill products array
+    // fill costumers array
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad OrderPage');
+    // console.log('ionViewDidLoad OrderPage');
   }
 
   trackCostumers(index, costumer) {
-    console.debug(index + " " + costumer);
+    // console.debug(index + " " + costumer);
   }
 
-  trackProduct(index, constumer) {
-
+  trackProduct(index, product) {
   }
 
+  submitOrder(event) {
+    console.debug(this.products)
+  }
+
+}
+
+interface Product {
+  name: string;
+  quantity: number; 
 }
