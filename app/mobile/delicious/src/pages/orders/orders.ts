@@ -10,35 +10,31 @@ import { OrderPage } from '../order/order';
 export class OrdersPage {
   selectedItem: any;
   icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  orders: Array<{icon: string, costumer: string, date: Date, products: Array<{name: string, quantity: number}> }>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
-    // Let's populate this page with some filler content for funzies
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
-
-    this.items = [];
+    this.orders = [];
     for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+      this.orders.push({
+        costumer: 'c ' + i,
+        date: new Date(),
+        icon: "paper",
+        products: [ {name: "p1", quantity: 3} ]
       });
     }
   }
 
-  itemTapped(event, item) {
+  itemTapped(event, order) {
     // That's right, we're pushing to ourselves!
     this.navCtrl.push(OrderPage, {
-      item: item
+      order: order
     });
   }
 
   newOrder(event) {
-    console.log(event)
     this.navCtrl.push(OrderPage);
   }
 }

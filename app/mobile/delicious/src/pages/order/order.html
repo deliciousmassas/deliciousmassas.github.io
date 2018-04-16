@@ -22,7 +22,7 @@
     <ion-item>
       <ion-label>Cliente</ion-label>
       <ion-select [(ngModel)]="selected_costumer">
-        <ion-option *ngFor="let costumer of costumers; trackBy: trackCostumers">
+        <ion-option *ngFor="let costumer of costumers">
           {{ costumer }}
         </ion-option>
       </ion-select>
