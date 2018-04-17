@@ -10,8 +10,8 @@
 <ion-content>
   <ion-list>
     <button ion-item *ngFor="let order of orders" (click)="itemTapped($event, order)">
-      <ion-icon [name]="order.icon" item-start></ion-icon>
-      {{order.costumer}}
+      <ion-icon name="paper" item-start></ion-icon>
+      {{order.custumer}}
       <div class="item-note" item-end>
         {{order.date.toLocaleDateString()}}
       </div>

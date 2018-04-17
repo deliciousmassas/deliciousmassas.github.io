@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { OrderPage } from '../order/order';
+import { OrderModel } from '../../core/OrderModel';
 
 @Component({
   selector: 'page-orders',
@@ -10,21 +11,20 @@ import { OrderPage } from '../order/order';
 export class OrdersPage {
   selectedItem: any;
   icons: string[];
-  orders: Array<{icon: string, costumer: string, date: Date, products: Array<{name: string, quantity: number}> }>;
+  orders: OrderModel[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
 
-    this.orders = [];
-    for (let i = 1; i < 11; i++) {
-      this.orders.push({
-        costumer: 'c ' + i,
-        date: new Date(),
-        icon: "paper",
-        products: [ {name: "p1", quantity: 3} ]
-      });
+    this.orders = this.loadOrdersFromDb();
+    if(navParams.get('order')) {
+      let order: OrderModel = navParams.get('order');
+      this.orders.push(order);
     }
+
+  }
+
+  loadOrdersFromDb() {
+    return []
   }
 
   itemTapped(event, order) {
@@ -35,6 +35,8 @@ export class OrdersPage {
   }
 
   newOrder(event) {
-    this.navCtrl.push(OrderPage);
+    this.navCtrl.push(OrderPage, {
+      order: new OrderModel()
+    });
   }
 }

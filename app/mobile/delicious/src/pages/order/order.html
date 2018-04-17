@@ -21,23 +21,23 @@
 
     <ion-item>
       <ion-label>Cliente</ion-label>
-      <ion-select [(ngModel)]="selected_costumer">
-        <ion-option *ngFor="let costumer of costumers">
-          {{ costumer }}
+      <ion-select [(ngModel)]="order.custumer">
+        <ion-option *ngFor="let custumer of custumers">
+          {{ custumer }}
         </ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>Data</ion-label>
-      <ion-datetime displayFormat="DD/MMM/YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="date"></ion-datetime>
+      <ion-datetime displayFormat="DD/MMM/YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="order.date"></ion-datetime>
     </ion-item>
 
   </ion-list>
 
   <ion-item-group>
     <ion-item-divider color="light">Produtos</ion-item-divider>
-    <ion-item *ngFor="let product of products">
+    <ion-item *ngFor="let product of order.products">
         <ion-grid item-content>
           <ion-row>
               <ion-col col-9>
