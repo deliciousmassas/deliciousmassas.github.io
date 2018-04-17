@@ -23,20 +23,30 @@ export class OrdersPage {
 
   }
 
+  // load orders from past week
   loadOrdersFromDb() {
     return []
   }
 
   itemTapped(event, order) {
-    // That's right, we're pushing to ourselves!
+    // send to order page for editing
     this.navCtrl.push(OrderPage, {
       order: order
     });
   }
 
+  loadProductsFromDb() {
+    return [{name:"p1",quantity:0}, {name:"p2", quantity:0},
+    {name:"p3", quantity:0}, {name:"p4", quantity:0}];
+  }
+
   newOrder(event) {
+    // create new order
+    let newOrder: OrderModel = new OrderModel();
+    newOrder.products = this.loadProductsFromDb()
+
     this.navCtrl.push(OrderPage, {
-      order: new OrderModel()
+      order: newOrder
     });
   }
 }

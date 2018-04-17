@@ -30,7 +30,7 @@
 
     <ion-item>
       <ion-label>Data</ion-label>
-      <ion-datetime displayFormat="DD/MMM/YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="order.date"></ion-datetime>
+      <ion-datetime displayFormat="DD/MMM/YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="selected_date"></ion-datetime>
     </ion-item>
 
   </ion-list>
@@ -44,7 +44,7 @@
                 <ion-label>{{ product.name }}</ion-label>
               </ion-col>
               <ion-col col-3>
-                <ion-input placeholder="Qtd." type="number" value="0" [(ngModel)]="product.quantity"></ion-input>
+                <ion-input placeholder="Qtd." type="number" [value]="product.quantity" [(ngModel)]="product.quantity"></ion-input>
               </ion-col>
           </ion-row>
         </ion-grid>
@@ -55,7 +55,7 @@
 
 <ion-footer>
   <ion-toolbar>
-    <button ion-button full (click)="submitOrder($event)">
+    <button ion-button full (click)="submitOrder($event, order)">
       Finalizar
     </button>
   </ion-toolbar>

@@ -16,32 +16,30 @@ import { OrdersPage } from '../orders/orders';
 })
 export class OrderPage {
 
-  custumers: string[] = ["c1", "c2", "c3"];
+  custumers: string[] = this.loadCustumersFromDb();
   order: OrderModel;
+  selected_date: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   
     this.order = navParams.get("order")
-
-    if(!this.order.products) {
-      this.order.products = [{name:"p1",quantity:0}, {name:"p2", quantity:0},
-                             {name:"p3", quantity:0}, {name:"p4", quantity:0}];
-    }
-
     console.debug(navParams.get("order"));
-    
+
   }
 
-  submitOrder(event) {
-    console.debug(this.order)
+  loadCustumersFromDb() {
+    return ["c1", "c2", "c3"];
+  }
 
-    if(!this.order.date) {
-      this.order.date = new Date()
-    }
+  submitOrder(event, orderFilled) {
+    console.debug(orderFilled)
+
+    // if(!orderFilled.date) {
+    //   orderFilled.date = new Date()
+    // }
 
     this.navCtrl.push(OrdersPage, {
-      order: this.order
+      order: orderFilled
     });
   }
-
 }
