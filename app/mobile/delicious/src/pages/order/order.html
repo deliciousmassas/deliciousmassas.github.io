@@ -23,28 +23,23 @@
       <ion-label>Cliente</ion-label>
       <ion-select [(ngModel)]="order.custumer">
         <ion-option *ngFor="let custumer of custumers">
-          {{ custumer }}
+          {{ custumer.name }}
         </ion-option>
       </ion-select>
     </ion-item>
-
-    <!-- <ion-item>
-      <ion-label>Data</ion-label>
-      <ion-datetime displayFormat="DD/MMM/YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="selected_date"></ion-datetime>
-    </ion-item> -->
 
   </ion-list>
 
   <ion-item-group>
     <ion-item-divider color="light">Produtos</ion-item-divider>
-    <ion-item *ngFor="let product of order.products">
+    <ion-item *ngFor="let orderEntry of order.orderEntries">
         <ion-grid item-content>
           <ion-row>
               <ion-col col-9>
-                <ion-label>{{ product.name }}</ion-label>
+                <ion-label>{{ orderEntry.product }}</ion-label>
               </ion-col>
               <ion-col col-3>
-                <ion-input placeholder="Qtd." type="number" [value]="product.quantity" [(ngModel)]="product.quantity"></ion-input>
+                <ion-input placeholder="Qtd." type="number" [value]="orderEntry.quantity" [(ngModel)]="orderEntry.quantity"></ion-input>
               </ion-col>
           </ion-row>
         </ion-grid>

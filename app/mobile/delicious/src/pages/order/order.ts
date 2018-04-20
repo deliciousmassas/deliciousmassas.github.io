@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { OrderAction } from '../actions/OrderAction';
 import { OrderModel } from '../model/OrderModel';
 import { OrdersPage } from '../orders/orders';
+import { CustumerModel } from '../model/CustumerModel';
+import { OrderEntryModel } from '../model/OrderEntryModel';
+import { ProductModel } from '../model/ProductModel';
 
 /**
  * Generated class for the OrderPage page.
@@ -15,31 +19,55 @@ import { OrdersPage } from '../orders/orders';
   templateUrl: 'order.html',
 })
 export class OrderPage {
-
-  custumers: string[] = this.loadCustumersFromDb();
+  readonly custumers: CustumerModel[] = this.loadCustumersFromDb();
   order: OrderModel;
-  // selected_date: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  
-    this.order = navParams.get("order")
-    console.debug(navParams.get("order"));
+    let action = navParams.get('action')
 
+    if(OrderAction.NEW_ORDER == action) {
+      this.order = this.newOrder();
+    }
+    else if(OrderAction.UPDATE_ORDER == action) {
+      this.order = navParams.get('order');
+    }
+
+    console.debug(navParams.get("order"));
+  }
+
+  private newOrder() {
+    let order = new OrderModel()
+    let products = this.loadProductsFromDb()
+    
+    for(let product of products) {
+      let orderEntry = new OrderEntryModel(product.name, 0, product.id)
+      order.orderEntries.push(orderEntry)
+    }
+    console.debug(order)
+
+    return order
+
+  }
+
+  loadProductsFromDb() {
+    return [
+      new ProductModel("p1"),
+      new ProductModel("p2"),
+      new ProductModel("p3"),
+      new ProductModel("p4")
+    ]
   }
 
   loadCustumersFromDb() {
-    return ["c1", "c2", "c3"];
+    return [new CustumerModel("c1"), new CustumerModel("c2"), new CustumerModel("c3")];
   }
 
-  submitOrder(event, orderFilled) {
-    console.debug(orderFilled)
-
-    if(!orderFilled.date) {
-      orderFilled.date = new Date()
-    }
-
+  submitOrder(event) {
     this.navCtrl.push(OrdersPage, {
-      order: orderFilled
+      action: OrderAction.SUBMIT_ORDER,
+      order: this.order
     });
+    
+    console.debug(this.order)
   }
 }

@@ -3,17 +3,17 @@ import { OrderEntryModel } from "./OrderEntryModel";
 
 export class OrderModel {
     readonly id: number;
-    readonly custumer: CustumerModel;
-    readonly products: Array<OrderEntryModel>;
-
+    
     date: Date;
+    custumer: CustumerModel;
+    orderEntries: OrderEntryModel[];
 
-    constructor(custumer: CustumerModel, id?: number) {
+    constructor(custumer?: CustumerModel, id?: number) {
         this.custumer = custumer;
         this.id = id;
 
         this.date = new Date();
 
-        this.products = [];
+        this.orderEntries = [];
     }
 }
