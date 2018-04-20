@@ -6,6 +6,8 @@ import { OrdersPage } from '../orders/orders';
 import { CustumerModel } from '../model/CustumerModel';
 import { OrderEntryModel } from '../model/OrderEntryModel';
 import { ProductModel } from '../model/ProductModel';
+import { Storage } from '@ionic/storage';
+
 
 /**
  * Generated class for the OrderPage page.
@@ -31,8 +33,6 @@ export class OrderPage {
     else if(OrderAction.UPDATE_ORDER == action) {
       this.order = navParams.get('order');
     }
-
-    console.debug(navParams.get("order"));
   }
 
   private newOrder() {
@@ -43,7 +43,6 @@ export class OrderPage {
       let orderEntry = new OrderEntryModel(product.name, 0, product.id)
       order.orderEntries.push(orderEntry)
     }
-    console.debug(order)
 
     return order
 
@@ -67,7 +66,5 @@ export class OrderPage {
       action: OrderAction.SUBMIT_ORDER,
       order: this.order
     });
-    
-    console.debug(this.order)
   }
 }

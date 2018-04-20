@@ -7,6 +7,8 @@ import { OrderPage } from '../order/order';
 import { OrderModel } from '../model/OrderModel';
 import { OrderEntryModel } from '../model/OrderEntryModel';
 import { ProductModel } from '../model/ProductModel';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'page-orders',
@@ -17,7 +19,7 @@ export class OrdersPage {
   icons: string[];
   orders: OrderModel[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private storage: Storage, public navCtrl: NavController, public navParams: NavParams) {
     this.orders = this.loadOrdersFromDb();
 
     let action = navParams.get('action');
@@ -30,11 +32,29 @@ export class OrdersPage {
   }
 
   pushOrder(order: OrderModel) {
-    this.orders.push(order);
+    this.orders.push(order)
+    this.storage.set('orders', JSON.stringify(this.orders))
   }
 
+  // https://ionicframework.com/docs/storage/
   // load orders from past week
   loadOrdersFromDb() {
+    console.debug(this.storage.get('orders'))
+    let orders = this.storage.get('orders')
+      .then((val) => {
+        let json = JSON.parse(val)
+        
+        let jsonOrders = []
+        for (let obj of json) {
+          console.debug(obj)
+          // let order: OrderModel = new OrderModel(obj.custumer, obj.id)
+          // order.orderEntries = obj.orderEntries
+          // jsonOrders.push(order)
+        }
+        // jsonOrders;
+      })
+      .catch(() => [])
+
     return []
   }
 
