@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { OrderPage } from '../order/order';
-import { OrderModel } from '../../core/OrderModel';
+import { OrderModel } from '../model/OrderModel';
 
 @Component({
   selector: 'page-orders',

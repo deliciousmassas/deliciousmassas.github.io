@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { OrderModel } from '../../core/OrderModel';
+import { OrderModel } from '../model/OrderModel';
 import { OrdersPage } from '../orders/orders';
 
 /**
@@ -18,7 +18,7 @@ export class OrderPage {
 
   custumers: string[] = this.loadCustumersFromDb();
   order: OrderModel;
-  selected_date: string;
+  // selected_date: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   
@@ -34,9 +34,9 @@ export class OrderPage {
   submitOrder(event, orderFilled) {
     console.debug(orderFilled)
 
-    // if(!orderFilled.date) {
-    //   orderFilled.date = new Date()
-    // }
+    if(!orderFilled.date) {
+      orderFilled.date = new Date()
+    }
 
     this.navCtrl.push(OrdersPage, {
       order: orderFilled
