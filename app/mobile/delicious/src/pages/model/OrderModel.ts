@@ -9,11 +9,33 @@ export class OrderModel {
     orderEntries: OrderEntryModel[];
 
     constructor(custumer?: CustumerModel, id?: number) {
-        this.custumer = custumer;
+        if(custumer) {
+            this.custumer = custumer;
+        }
+        else {
+            this.custumer = new CustumerModel()
+        }
+
         this.id = id;
 
         this.date = new Date();
 
         this.orderEntries = [];
+    }
+
+    static orderFromJsonParser(order) {
+        let newCustumer: CustumerModel = new CustumerModel(order.custumer.name, order.custumer.id)
+        console.debug(newCustumer)
+        let newOrder: OrderModel = new OrderModel(newCustumer, order.id)
+
+        for(let orderEntry of order.orderEntries) {
+            
+            newOrder.orderEntries.push(
+                new OrderEntryModel(orderEntry.product, orderEntry.quantity, orderEntry.productId, orderEntry.id)
+            )
+            
+        }
+
+        return newOrder
     }
 }

@@ -21,7 +21,7 @@
 
     <ion-item>
       <ion-label>Cliente</ion-label>
-      <ion-select [(ngModel)]="order.custumer">
+      <ion-select [(ngModel)]="order.custumer.name" (ngModelChange)="onChange($event)">
         <ion-option *ngFor="let custumer of custumers">
           {{ custumer.name }}
         </ion-option>

@@ -5,8 +5,6 @@ import { OrderAction } from '../actions/OrderAction';
 
 import { OrderPage } from '../order/order';
 import { OrderModel } from '../model/OrderModel';
-import { OrderEntryModel } from '../model/OrderEntryModel';
-import { ProductModel } from '../model/ProductModel';
 import { Storage } from '@ionic/storage';
 
 
@@ -20,47 +18,47 @@ export class OrdersPage {
   orders: OrderModel[];
 
   constructor(private storage: Storage, public navCtrl: NavController, public navParams: NavParams) {
-    this.orders = this.loadOrdersFromDb();
-
     let action = navParams.get('action');
     let order = navParams.get('order');
 
-    
+    this.orders = []
+
     if(OrderAction.SUBMIT_ORDER == action) {
       this.pushOrder(order)
     }
+    this.loadOrdersFromDb()
   }
 
   pushOrder(order: OrderModel) {
     this.orders.push(order)
-    this.storage.set('orders', JSON.stringify(this.orders))
   }
 
   // https://ionicframework.com/docs/storage/
   // load orders from past week
   loadOrdersFromDb() {
-    console.debug(this.storage.get('orders'))
-    let orders = this.storage.get('orders')
+    this.storage.get('orders')
       .then((val) => {
         let json = JSON.parse(val)
-        
-        let jsonOrders = []
         for (let obj of json) {
-          console.debug(obj)
-          // let order: OrderModel = new OrderModel(obj.custumer, obj.id)
-          // order.orderEntries = obj.orderEntries
-          // jsonOrders.push(order)
+          let order: OrderModel = OrderModel.orderFromJsonParser(obj)
+          this.orders.push(order)
         }
-        // jsonOrders;
       })
-      .catch(() => [])
-
-    return []
+      .catch((val) => {
+        this.storage.set('orders', JSON.stringify([]))
+      })
   }
-
 
   itemTapped(event, order) {
     // send to order page for editing
+
+    var index = this.orders.indexOf(order, 0)
+    if (index > -1) {
+      this.orders.splice(index, 1);
+    }
+    
+    this.storage.set('orders', JSON.stringify(this.orders))
+    // console.debug(JSON.stringify(this.orders))
     this.navCtrl.push(OrderPage, {
       action: OrderAction.UPDATE_ORDER,
       order: order
@@ -68,6 +66,8 @@ export class OrdersPage {
   }
 
   newOrder(event) {
+    this.storage.set('orders', JSON.stringify(this.orders))
+    console.debug(JSON.stringify(this.orders))
     this.navCtrl.push(OrderPage, {
       action: OrderAction.NEW_ORDER
     });

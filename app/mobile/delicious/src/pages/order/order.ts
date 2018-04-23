@@ -35,6 +35,10 @@ export class OrderPage {
     }
   }
 
+  onChange(newValue) {
+    console.log(newValue.name + " " + newValue.id)
+  }
+
   private newOrder() {
     let order = new OrderModel()
     let products = this.loadProductsFromDb()
@@ -58,13 +62,14 @@ export class OrderPage {
   }
 
   loadCustumersFromDb() {
-    return [new CustumerModel("c1"), new CustumerModel("c2"), new CustumerModel("c3")];
+    return [new CustumerModel("c1",1), new CustumerModel("c2",2), new CustumerModel("c3",3)];
   }
 
-  submitOrder(event) {
+  submitOrder(event, order) {
+    console.debug(order)
     this.navCtrl.push(OrdersPage, {
       action: OrderAction.SUBMIT_ORDER,
-      order: this.order
+      order: order
     });
   }
 }

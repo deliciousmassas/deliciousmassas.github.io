@@ -21,7 +21,10 @@ import { OrderPage } from '../pages/order/order';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot({
+        name: '__deliciousdb',
+        driverOrder:['indexeddb', 'sqlite', 'websql']
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
