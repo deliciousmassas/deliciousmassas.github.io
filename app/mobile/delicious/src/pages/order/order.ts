@@ -35,8 +35,16 @@ export class OrderPage {
     }
   }
 
-  onChange(newValue) {
-    console.log(newValue.name + " " + newValue.id)
+  onChange(id) {
+    this.order.custumer = this.findCustumerById(id)
+  }
+
+  findCustumerById(id): CustumerModel {
+    for(let custumer of this.custumers) {
+      if(custumer.id == id) {
+        return custumer
+      }
+    }
   }
 
   private newOrder() {

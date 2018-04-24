@@ -27,6 +27,7 @@ export class OrdersPage {
       this.pushOrder(order)
     }
     this.loadOrdersFromDb()
+    this.storage.set('orders', JSON.stringify(this.orders))
   }
 
   pushOrder(order: OrderModel) {
