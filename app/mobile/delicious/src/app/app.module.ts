@@ -10,10 +10,12 @@ import { OrdersPage } from '../pages/orders/orders';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OrderPage } from '../pages/order/order';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
+    LoginPage,
     HomePage,
     OrdersPage,
     OrderPage
@@ -29,6 +31,7 @@ import { OrderPage } from '../pages/order/order';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    LoginPage,
     HomePage,
     OrdersPage,
     OrderPage
