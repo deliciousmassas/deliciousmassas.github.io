@@ -7,6 +7,7 @@ import { CustumerModel } from '../model/CustumerModel';
 import { OrderEntryModel } from '../model/OrderEntryModel';
 import { ProductModel } from '../model/ProductModel';
 import { Storage } from '@ionic/storage';
+import { OrdersModel} from '../model/OrdersModel';
 
 
 /**
@@ -21,10 +22,12 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'order.html',
 })
 export class OrderPage {
+  ordersModel: OrdersModel
   readonly custumers: CustumerModel[] = this.loadCustumersFromDb();
   order: OrderModel;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private storage: Storage, public navCtrl: NavController, public navParams: NavParams) {
+    this.ordersModel = new OrdersModel(storage)
     let action = navParams.get('action')
 
     if(OrderAction.NEW_ORDER == action) {
@@ -75,9 +78,7 @@ export class OrderPage {
 
   submitOrder(event, order) {
     console.debug(order)
-    this.navCtrl.push(OrdersPage, {
-      action: OrderAction.SUBMIT_ORDER,
-      order: order
-    });
+    this.ordersModel.saveOrder(order)
+    this.navCtrl.pop()
   }
 }

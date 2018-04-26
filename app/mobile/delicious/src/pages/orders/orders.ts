@@ -6,6 +6,7 @@ import { OrderAction } from '../actions/OrderAction';
 import { OrderPage } from '../order/order';
 import { OrderModel } from '../model/OrderModel';
 import { Storage } from '@ionic/storage';
+import { OrdersModel } from '../model/OrdersModel';
 
 
 @Component({
@@ -13,25 +14,22 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'orders.html'
 })
 export class OrdersPage {
+  ordersStorage: OrdersModel 
+
   selectedItem: any;
   icons: string[];
   orders: OrderModel[];
 
   constructor(private storage: Storage, public navCtrl: NavController, public navParams: NavParams) {
+    this.ordersStorage = new OrdersModel(storage)
     let action = navParams.get('action');
-    let order = navParams.get('order');
-
-    this.orders = []
-
-    if(OrderAction.SUBMIT_ORDER == action) {
-      this.pushOrder(order)
-    }
-    this.loadOrdersFromDb()
-    this.storage.set('orders', JSON.stringify(this.orders))
+    
+    this.orders = []  
   }
 
-  pushOrder(order: OrderModel) {
-    this.orders.push(order)
+  ionViewWillEnter() {
+    this.orders = []  
+    this.loadOrdersFromDb();
   }
 
   // https://ionicframework.com/docs/storage/
@@ -58,7 +56,7 @@ export class OrdersPage {
       this.orders.splice(index, 1);
     }
     
-    this.storage.set('orders', JSON.stringify(this.orders))
+    this.ordersStorage.saveOrders(this.orders)
     // console.debug(JSON.stringify(this.orders))
     this.navCtrl.push(OrderPage, {
       action: OrderAction.UPDATE_ORDER,
@@ -67,10 +65,10 @@ export class OrdersPage {
   }
 
   newOrder(event) {
-    this.storage.set('orders', JSON.stringify(this.orders))
-    console.debug(JSON.stringify(this.orders))
+    this.ordersStorage.saveOrders(this.orders)
     this.navCtrl.push(OrderPage, {
       action: OrderAction.NEW_ORDER
     });
   }
+
 }
