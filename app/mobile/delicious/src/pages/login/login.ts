@@ -19,7 +19,13 @@ export class LoginPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    setTimeout(() => {
+      this.email.setFocus();
+    }, 500)
+  }
+
+  login() {
+    
   }
 
 }

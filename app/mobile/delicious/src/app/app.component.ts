@@ -13,11 +13,19 @@ import { LoginPage } from '../pages/login/login';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+    let logged: boolean
+    if(logged) {
+      this.rootPage = HomePage
+    }
+    else {
+      this.rootPage = LoginPage
+    }
+
     this.initializeApp();
 
     // used for an example of ngFor and navigation
