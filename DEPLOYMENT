@@ -1,0 +1,6 @@
+For deployment into production server (Hostgator)
+
+1. add the remote repository
+  ```delicious@deliciousmassas.com.br:/home/deliciou/delicious.git```
+
+2. ```git push production master```
