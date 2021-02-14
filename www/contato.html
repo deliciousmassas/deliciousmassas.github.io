@@ -10,6 +10,17 @@
       gtag('js', new Date());
       gtag('config', 'UA-116181721-1');
     </script>
+    <script type=text/javascript>
+      function sendmail(form) {
+        name = form.name.value
+        subject = form.subject.value
+        message = form.message.value
+        email = email.value
+        linebreak = "%0A"
+
+        window.location.href = "mailto:delicious.pizzas@gmail.com?subject=[SITE][CONTATO]["+subject.toUpperCase()+"]&body="+message+linebreak+name+linebreak+email;
+      }
+    </script>
     <title>Delicious Massas e Cia. Ltda.</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -112,7 +123,9 @@
             <div class="col-sm-12 col-lg-6 my-auto no-padding">
                 <div class="item-image-effects">
                     <div class="item-image">
-                        <form name="contatoForm" action="sendmail.php" method="POST" accept-charset="UTF-8">
+                        <!-- <form name="contatoForm" action="sendmail.php"
+                          method="POST" accept-charset="UTF-8"> -->
+                          <form name="contatoForm" action="#" onsubmit="sendmail(this)" method="GET" accept-charset="UTF-8">
                             <div class="form-row">
 
                                 <input id="back-page" name="back-page" type="hidden" value="contato.html">
